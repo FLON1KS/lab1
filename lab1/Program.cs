@@ -1,4 +1,4 @@
-﻿namespace lab1
+﻿namespace Task1
 {
     internal class Program
     {
