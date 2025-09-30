@@ -1,10 +1,33 @@
 ﻿namespace Task1
 {
-    internal class Program
+    using System;
+
+    public class Program
     {
-        static void Main(string[] args)
+        public static bool IsEven(int x)
         {
-            Console.WriteLine("dmhvdvajhdvaj");
+            return x % 2 == 0;
+        }
+        public static string GetMessage(int x)
+        {
+            if (IsEven(x))
+            {
+                return "Двері відкриваються!";
+            }
+            return "Двері зачинені...";
+        }
+        static void Main()
+        {
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
+
+            if (int.TryParse(Console.ReadLine(), out int enteredNumb))
+            {
+                Console.WriteLine(GetMessage(enteredNumb));
+            }
+            else
+            {
+                Console.WriteLine("Неправильний ввід");
+            }
         }
     }
 }
